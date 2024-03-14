@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="card">
+      <div class="card-header">
+        Cica adatai
+      </div>
+      <div class="card-body">
+        <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+          <div class="form-group">
+            <label for="name">Név</label>
+            <input type="text" class="form-control" id="name" name="name" required ngModel>
+          </div>
+          <div class="form-group">
+            <label for="birthdate">Születési dátum</label>
+            <input type="date" class="form-control" id="birthdate" name="birthdate" required ngModel>
+          </div>
+          <div class="form-group">
+            <label>Nem</label><br>
+            <label class="form-check-label">
+              <input type="radio" name="gender" value="male" ngModel> Hím
+            </label>
+            <label class="form-check-label">
+              <input type="radio" name="gender" value="female" ngModel> Nőstény
+            </label>
+          </div>
+          <div class="form-group">
+            <label for="color">Szín</label>
+            <select class="form-control" id="color" name="color" required ngModel>
+              <option value="" disabled selected>Válasszon színt</option>
+              <option value="fehér">Fehér</option>
+              <option value="fekete">Fekete</option>
+              <option value="csíkos">Csíkos</option>
+              <option value="foltos">Foltos</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">OK</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
